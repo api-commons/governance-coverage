@@ -1,0 +1,22 @@
+{
+  "name": "governance-coverage",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "A browser-first tool that measures how much of your API description your governance actually looks at — resolve every rule's JSONPath against your OpenAPI and report coverage by section, dead rules, and per-rule reach.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "data": "node tools/build-rulesets.mjs"
+  },
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "typescript": "^5.7.2",
+    "vite": "^5.4.11"
+  },
+  "dependencies": {
+    "jsonpath-plus": "^10.2.0",
+    "yaml": "^2.6.1"
+  }
+}

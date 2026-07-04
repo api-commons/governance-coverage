@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Governance Coverage — how much of your API do your rules actually check?</title>
+    <meta name="description" content="Measure how much of your API description your governance actually looks at. Resolve every rule's JSONPath against your OpenAPI and get coverage by section, the rules that match nothing, and each rule's reach. Runs entirely in your browser." />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <!-- Google tag (gtag.js) — API Commons -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WNSPT4B4S8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WNSPT4B4S8');
+    </script>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <strong>Governance Coverage</strong>
+        <span class="tag">coverage.apicommons.org</span>
+      </div>
+      <nav>
+        <a href="#" id="nav-about" title="What coverage means">About</a>
+        <a href="https://apis.io" target="_blank" rel="noopener">APIs.io</a>
+        <a href="https://apicommons.org" target="_blank" rel="noopener">API Commons</a>
+        <a href="https://github.com/api-commons/governance-coverage" target="_blank" rel="noopener">GitHub</a>
+        <button id="engage-ae" class="engage-btn" type="button" title="Work with API Evangelist on API governance">Get help</button>
+      </nav>
+    </header>
+
+    <div class="toolbar">
+      <div class="ctl">
+        <label>Description</label>
+        <button class="chip-btn is-active" id="src-sample" type="button">Sample</button>
+        <button class="chip-btn" id="src-paste" type="button">Paste</button>
+        <button class="chip-btn" id="src-upload" type="button">Upload…</button>
+        <input type="file" id="file-input" accept=".json,.yaml,.yml,application/json,text/yaml" hidden />
+      </div>
+      <div class="ctl">
+        <label>Ruleset</label>
+        <select id="ruleset-select">
+          <option value="catalog">API Commons catalog</option>
+          <option value="custom">Paste your own…</option>
+        </select>
+      </div>
+      <button class="measure-btn" id="measure" type="button">Measure coverage ▸</button>
+      <div class="counts" id="doc-status" aria-live="polite"></div>
+    </div>
+
+    <details class="drawer" id="input-drawer">
+      <summary>API description &amp; ruleset input</summary>
+      <div class="drawer-grid">
+        <div>
+          <div class="drawer-label">API description <span class="muted">(OpenAPI 3.x / Swagger 2.0 / AsyncAPI — JSON or YAML)</span></div>
+          <textarea id="doc-text" spellcheck="false" placeholder="Paste your OpenAPI here, or use Sample / Upload…"></textarea>
+        </div>
+        <div id="custom-ruleset-wrap" hidden>
+          <div class="drawer-label">Your Spectral ruleset <span class="muted">(YAML / JSON with a <code>rules:</code> map)</span></div>
+          <textarea id="ruleset-text" spellcheck="false" placeholder="Paste your .spectral.yaml to measure YOUR rules' coverage…"></textarea>
+        </div>
+      </div>
+    </details>
+
+    <main class="stage">
+      <section class="report" id="report">
+        <div class="loading" id="loading">Loading the rule catalog…</div>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

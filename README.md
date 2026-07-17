@@ -12,12 +12,6 @@ every operation, parameter, response, schema, and property — how many does *an
 actually inspect? A section at 0% is a blind spot. A rule that matches nothing is dead
 weight for *this* API.
 
-Part of the [API Commons](https://apicommons.org/tools/) tools, alongside
-[API Validator](https://github.com/api-commons/api-validator),
-[API Governance Graph](https://github.com/api-commons/api-governance-graph),
-[Spectral Ruleset Studio](https://github.com/api-commons/spectral-ruleset-studio), and
-[Governance Pipeline Auditor](https://github.com/api-commons/governance-pipeline-auditor).
-
 ## What it reports
 
 - **Coverage** — the share of governable nodes reached by at least one rule, and the
@@ -72,6 +66,18 @@ repos, no network. Regenerate it when the rule catalog changes.
 
 Everything runs client-side. The API description and ruleset you paste never leave the page —
 there is no server.
+
+## Part of API Commons
+
+An open, browser-first tool from **[API Commons](https://apicommons.org)** — free, no backend, your data stays in your browser. Browse the full set at **[apicommons.org/tools](https://apicommons.org/tools/)**.
+
+**Related tools**
+- [Governance Baseline](https://baseline.apicommons.org) — adopt governance on a legacy estate; fail only new violations
+- [Governance Scorecard](https://scorecard.apicommons.org) — the longitudinal health trend of your governance
+- [Governance Waivers](https://waivers.apicommons.org) — sanctioned, owned, expiring governance exceptions
+- [Spectral Ruleset Studio](https://studio.apicommons.org) — turn a style guide into an owned ruleset
+- [API Validator](https://validator.apicommons.org) — lint OpenAPI/AsyncAPI/Arazzo/JSON Schema in your browser
+- [API Governance Graph](https://graph.apicommons.org) — bind governance building blocks into one graph
 
 ---
 

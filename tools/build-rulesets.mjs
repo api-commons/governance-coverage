@@ -12,7 +12,7 @@ import { parse as parseYaml } from 'yaml';
 const HERE = dirname(fileURLToPath(import.meta.url));
 const REPO = resolve(HERE, '..');
 const COMMONS = resolve(REPO, '..');
-const CATALOG = join(COMMONS, 'api-validator', 'rules', 'all-rules.yaml');
+const CATALOG = join(COMMONS, 'common-openlint-validator', 'rules', 'all-rules.yaml');
 
 const arr = (v) => (Array.isArray(v) ? v : v == null ? [] : [v]);
 

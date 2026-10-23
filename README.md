@@ -43,7 +43,7 @@ silently dropped.
 ## Rulesets
 
 - **API Commons catalog** (default) — the bundled 769-rule catalog from
-  [`api-validator`](https://github.com/api-commons/api-validator), auto-selected by the
+  [`common-openlint-validator`](https://github.com/api-commons/common-openlint-validator), auto-selected by the
   document's format.
 - **Bring your own** — paste a Spectral ruleset (YAML/JSON with a `rules:` map) to measure
   *your* governance against *your* API. This is the real "does our governance cover our API"
@@ -53,7 +53,7 @@ silently dropped.
 
 ```bash
 npm install
-npm run data      # rebuild public/rulesets.json from ../api-validator/rules/all-rules.yaml
+npm run data      # rebuild public/rulesets.json from ../common-openlint-validator/rules/all-rules.yaml
 npm run dev
 npm run build     # → dist/
 ```
